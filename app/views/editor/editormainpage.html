@@ -1,0 +1,46 @@
+
+<!-- <div class="row page-head" ng-controller="mediumController">
+  <div ng-model="text" medium-editor></div>
+
+<
+</div> -->
+<head>
+<link rel="stylesheet" href="style/css/vimal.css">
+</head>
+<div class="welcome_title" style="padding-top:18px;"><a href="http://fit.practo.local/#!/vallPosts/status/all/page/1">
+
+<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+
+
+</div>
+<hr class="heading_line">
+<h3> Submit an article </h3>
+
+<div name="form" ng-controller="mediumController">
+   <div ng-model="title" medium-editor data-placeholder="Enter a title" style="margin: 5px"></div>
+   <div ng-model="content" medium-editor data-placeholder="Write the content" style="margin: 5px"></div>
+   <div>
+      <span ng-bind='user_msg' style="display: block;"></span>
+
+      <input type="button" class="btn btn-primary" ng-click = "draftBtn()" value = "Save as Draft">
+      <input type="button" class="btn btn-success" ng-click = "publishBtn()" value = "Publish">
+      <!-- <input type="button" ng-click = "redirectBtn()" value = "Go to All posts"> -->
+   </div>
+
+   
+   <!-- <input type="submit" value="Reset" ng-click = "reset()"> -->
+  
+
+   
+
+   
+</div>
+
+ <!-- <div class="row page-head" ng-controller="mediumController">
+   <div ng-model="text" medium-editor></div> -->
+
+
+   <!-- <input type="submit" ng-click="clickBtn()" value="Submit" id="submitTheForm" >
+<div> <h5>{{content}}</h5></div>
+
+</div> -->

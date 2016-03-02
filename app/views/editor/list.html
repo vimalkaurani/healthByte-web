@@ -1,0 +1,51 @@
+
+<div class="welcome_title" style="padding-top:18px;"><a href="http://fit.practo.local/#!/vallPosts/status/all/page/1">
+
+<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+
+
+</div>
+<hr class="heading_line">
+
+
+<!-- <hr style="border-top: 1px dotted #8c8b8b;
+	border-bottom: 1px dotted #fff;">
+ -->
+<div class="col-md-1"></div>
+<div class="row" ng-controller = "listController">
+	<div class="col-md-2">
+				<div class="new_post_div">
+						<input  type="button" class="btn btn-primary new_post_btn" ng-click="newPost()" value="Write new Post">
+   			</div>
+   			
+				<div class="list_button_div_1"><a ng-click = "showAllPosts()"><div class="list-btn-div"> All Posts </div></a></div>
+      	<div class="list_button_div_1"><a ng-click = "showPublishedBtn()"> <div class="list-btn-div">Published </div></a></div>
+      	<div class="list_button_div_1"><a ng-click = "showDraftsBtn()" ><div class="list-btn-div">Drafts</div></a></div>
+      	<div class="list_button_div"><a ng-click = "showDeletedBtn()" ><div class="list-btn-div">Deleted </div></a></div>
+
+  </div>
+	
+	<div class="col-md-6"  >
+  
+  	<h3 class="status-head"> {{postlabel}} </h3>
+
+  	<hr>
+    <!-- <div >
+  		<input type="button" ng-click = "prevPage()" value = "PreviousPage">
+  		<input type="button" ng-click = "nextPage()" value = "Next Page">
+		</div> -->
+  	<div class="post-div" ng-repeat = "post in posts">
+		<a href="#!/editor/{{post.id}}">
+    <h3 class = "post-title"> {{post.ttl| htmlToPlaintext}}</h3>
+    <div class="post-content"> {{post.exp | htmlToPlaintext}} </div>
+  	</a>
+  	</div>
+
+  	<div>	
+  		<input type="button" class="btn btn-primary" ng-click = "prevPage()" value = "PreviousPage">
+  		<input type="button" class="btn btn-primary" ng-click = "nextPage()" value = "Next Page">
+		</div>
+
+	</div>
+	
+</div>

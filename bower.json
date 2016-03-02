@@ -1,0 +1,42 @@
+{
+  "name": "practo/fit-web",
+  "description": "Fit Connect Project (AngularJs and RequireJs)",
+  "version": "1.1.0",
+  "homepage": "https://github.com/practo/fit-web",
+  "license": "proprietary",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.6",
+    "angular-bootstrap": "0.13.4",
+    "angular-cookies": "1.4.6",
+    "angular-dropdowns": "1.1.0",
+    "angular-jwt": "0.0.9",
+    "angular-loader": "1.4.0",
+    "angular-mocks": "1.4.0",
+    "angular-modal-service": "0.6.7",
+    "angular-paging": "1.0.3",
+    "angular-resource": "1.4.5",
+    "angular-route": "1.4.0",
+    "angular-sanitize": "1.4.5",
+    "angular-smart-table": "2.1.2",
+    "angular-touch": "1.4.5",
+    "angular-typeahead": "0.2.3",
+    "angular-utils-pagination": "0.8.3",
+    "html5-boilerplate": "5.2.0",
+    "lodash": "3.10.1",
+    "moment": "2.10.6",
+    "ng-file-upload": "6.2.1",
+    "ng-file-upload-shim": "6.2.1",
+    "ng-tags-input": "3.0.0",
+    "ng-chartjs": "0.0.5",
+    "textAngular": "1.4.3",
+    "requirejs": "2.1.20",
+    "medium-editor": "5.14.0",
+    "angular-medium-editor": "1.1.0",
+    "medium-editor-insert-plugin": "^0.3"
+  },
+  "resolutions": {
+    "angular": "1.4.6",
+    "medium-editor": "5.14.0"
+  }
+}

@@ -1,0 +1,44 @@
+
+<!-- <div class="row page-head" ng-controller="mediumController">
+  <div ng-model="text" medium-editor></div>
+
+<
+</div> -->
+<head>
+<link rel="stylesheet" href="style/css/vimal.css">
+</head>
+<div class="welcome_title" style="padding-top:18px;">
+
+<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;">
+
+
+</div>
+<h3> Submit an article </h3>
+
+<div name="form" ng-controller="mediumController">
+   <div ng-model="title" medium-editor data-placeholder="Enter a title"></div>
+   <div ng-model="content" medium-editor data-placeholder="Write the content" ></div>
+   <div>
+      <span ng-bind='user_msg' style="display: block;"></span>
+
+      <input type="button" ng-click = "submitBtn()" value = "Submit">
+      <!-- <input type="button" ng-click = "redirectBtn()" value = "Go to All posts"> -->
+   </div>
+
+   
+   <!-- <input type="submit" value="Reset" ng-click = "reset()"> -->
+  
+
+   
+
+   
+</div>
+
+ <!-- <div class="row page-head" ng-controller="mediumController">
+   <div ng-model="text" medium-editor></div> -->
+
+
+   <!-- <input type="submit" ng-click="clickBtn()" value="Submit" id="submitTheForm" >
+<div> <h5>{{content}}</h5></div>
+
+</div> -->

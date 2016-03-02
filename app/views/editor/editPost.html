@@ -1,0 +1,28 @@
+<head>
+<link rel="stylesheet" href="style/css/vimal.css">
+</head>
+<div class="welcome_title" style="padding-top:18px; "><a href="http://fit.practo.local/#!/vallPosts/status/all/page/1">
+
+<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+
+</div>
+<hr class="heading_line">
+<div class="col-md-9" ng-controller = "editPostController" ng-init = "editPosts()">
+
+    <div class="post-div " >
+
+      <!-- <h3 class = "post-title" >{{post.title}}</h3>
+      <p>{{post.content}}  </p> -->
+
+      <h3 tabindex="0" class = "post-title" ng-model='title' medium-editor > </h3><br>
+      <p class="post_content_full" ng-model='content' medium-editor></p>
+
+    <!-- <p>{{post.content}}  </p> -->
+
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="editBtn()" value="Save">
+  <input ng-show = "publishedStatus != 'published' && softDeleted==0" type="submit" class="btn btn-success" ng-click="publishBtn()" value="Publish">
+  <input ng-show = "softDeleted == 0" type="submit" class="btn btn-danger" ng-click="deletePost()" value="Delete">
+  <input ng-show = "softDeleted == 1" type="submit" class="btn btn-info" ng-click="saveAsDraft()"
+  value="Save back to drafts">
+</div>

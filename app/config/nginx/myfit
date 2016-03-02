@@ -1,0 +1,30 @@
+server {
+  server_name myfit.practo.local;
+  listen 80;
+  listen 443 ssl;
+  client_max_body_size 128m;
+
+  
+ 
+  access_log /var/log/nginx/fit.access.log;
+  error_log  /var/log/nginx/fit.error.log;
+
+
+  root /home/vagrant/www/healthByte-web/fit-web/app;
+
+  location / {
+    try_files $uri @app;
+  }
+
+  location ~ ^/api(.*)$ {
+    root /home/vagrant/www/healthByte/web;
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME $document_root/app_dev.php;
+    fastcgi_param REQUEST_URI $1;
+  }
+  location @app {
+    index  index.htm index.html;
+  }
+
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" id="ng-app" data-framework="angularjs">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Practo Fit</title>
+
+    <link rel="shortcut icon" type="image/png" href="style/images/favicon.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/medium-editor/dist/css/medium-editor.min.css"> <!-- Core Editor -->
+    <link rel="stylesheet" href="vendor/medium-editor/dist/css/themes/default.css"> <!-- or any other theme Editor -->
+
+    <!-- medium-editor-insert-plugin CSS-->
+    <link rel="stylesheet" href="vendor/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link href="style/css/fit.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style/css/vimal.css">
+
+    <link rel="stylesheet" href="style/css/font-awesome.min.css">
+</head>
+<body class="{{bodylayout}}" id="body">
+
+<!-- Page Content -->
+<div class="container-fluid col-lg-offset-3-0-0">
+    <div id="form" style="display: none;"></div>
+    <ng-view></ng-view>
+</div>
+<!-- /.container -->
+<!-- Footer -->
+<footer>
+    <div class="row">
+        <div class="col-lg-9">
+
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</footer>
+
+<script type="text/javascript" src="vendor/rangy/rangy-core.js"></script>
+<script type="text/javascript" src="vendor/rangy/rangy-selectionsaverestore.js"></script>
+<script type="text/javascript" src="vendor/medium-editor/dist/js/medium-editor.min.js"></script>
+
+
+<!-- build:js -->
+<script type="text/javascript" src="vendor/requirejs/require.js" data-main="/scripts/bootstrap.js"></script>
+<!-- endbuild -->
+<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);mixpanel.init("8062773613b087545a9d0810c45d6173");</script><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);mixpanel.init("8062773613b087545a9d0810c45d6173");</script></body>
+</html>
