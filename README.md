@@ -1,18 +1,13 @@
-FIT CONNECT [![Build Status](https://magnum.travis-ci.com/practo/fit-web.svg?token=esq7sx72sNHqZnizRyxD&branch=master)](https://magnum.travis-ci.com/practo/fit-web)
-======
-
-Fit-Web is a Angular Project
-For doctors its providing publishing tool platform and
-for Admin its providing moderation platform.
-
+HealthByte-Web is a Angular Project
+For doctors its providing publishing tool platform.
 Setup Codebase
 --------------
 
 * Clone the repository:
 
 ```
-git clone https://github.com/practo/fit-web.git
-cd fit-web
+git clone https://github.com/vimalkaurani/healthByte-web.git
+cd healthByte-web
 ```
 
 * Install Dependencies and configure parameters
@@ -56,6 +51,6 @@ sudo service nginx restart
 Add following lines to /etc/hosts files on your machine and box
 
 ```
-127.0.0.1 fit.practo.local
+127.0.0.1 healthByte.fit.local
 ```
 
