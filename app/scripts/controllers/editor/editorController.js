@@ -16,7 +16,6 @@ define(['angular', 'app'], function (angular, app) {
                         'publishedDraft' : 'draft',
                         'softDeleted' : 0};
      
-
                 var url = "/api/posts";
                 postService.post(url,user_data)
                     .then(function(response) {

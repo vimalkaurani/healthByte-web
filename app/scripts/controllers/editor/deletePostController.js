@@ -22,7 +22,7 @@ define(['app'], function (app) {
               };
 
             $http(req).success( function(response) {
-                $location.path("/vallPosts/status/" + response[0].publishedDraft +'/page/1');
+                $location.path("/vallPosts/status/" + response['data'][0].publishedDraft +'/page/1');
             });
             
        });

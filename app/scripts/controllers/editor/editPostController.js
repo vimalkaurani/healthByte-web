@@ -16,10 +16,10 @@ define(['angular', 'app'], function (angular, app){
                };
 
        $http(req).success( function(response) {
-         $scope.title = response[0].title;
-         $scope.content = response[0].content;
-         $scope.publishedStatus = response[0].publishedDraft;
-         $scope.softDeleted=response[0].softDeleted;
+         $scope.title = response['data'][0].title;
+         $scope.content = response['data'][0].content;
+         $scope.publishedStatus = response['data'][0].publishedDraft;
+         $scope.softDeleted=response['data'][0].softDeleted;
          console.log($scope.publishedStatus);
        });
      };
@@ -40,7 +40,7 @@ define(['angular', 'app'], function (angular, app){
               };
 
             $http(req).success( function(response) {
-                $location.path("/vallPosts/status/" + response[0].publishedDraft +'/page/1');
+                $location.path("/vallPosts/status/" + response['data'][0].publishedDraft +'/page/1');
             });
        });
      };
@@ -62,7 +62,7 @@ define(['angular', 'app'], function (angular, app){
               };
 
             $http(req).success( function(response) {
-                $location.path("/vallPosts/status/" + response[0].publishedDraft +'/page/1');
+                $location.path("/vallPosts/status/" + response['data'][0].publishedDraft +'/page/1');
             });
        });
      };

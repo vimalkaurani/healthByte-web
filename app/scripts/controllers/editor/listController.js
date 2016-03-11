@@ -6,14 +6,28 @@ define(['angular', 'app'], function (angular, app) {
 
   app.controller("listController", function
    ($scope, $location, FitGlobalService, getService, patchService, $modal, $rootScope, $routeParams, $http) {
-    
+    $scope.pagination = false;
+
+
     function getAllPost(url) {
       var req = {method : 'GET',
                 url : url
               };
 
       $http(req).success( function(response) {
-      $scope.posts = response;
+      $scope.posts = response['data'];
+      $scope.totalCount = response['totalCount'];
+      if(Object.keys($scope.posts).length !== 0) {
+          $scope.pagination = true;
+        }
+        console.log($scope.totalCount);
+        $scope.noOfPages = Math.ceil($scope.totalCount/10);
+          if($scope.pageno == $scope.noOfPages){
+            $scope.nextPageHide = true;
+          }
+          if($scope.pageno == 1){
+            $scope.prevPageHide = true;
+          }
       });
     }
 
@@ -35,7 +49,8 @@ define(['angular', 'app'], function (angular, app) {
       $scope.url='/api/posts?pageno=' + $scope.pageno;
       $scope.postlabel='All Current Posts'; 
     }
-
+    
+    
 
 
     getAllPost($scope.url);

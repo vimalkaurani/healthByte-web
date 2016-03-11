@@ -1,5 +1,5 @@
 
-<div class="welcome_title" style="padding-top:18px;"><a href="http://fit.practo.local/#!/vallPosts/status/all/page/1">
+<div class="welcome_title" style="padding-top:18px;"><a href="http://myfit.practo.local/#!/vallPosts/status/all/page/1">
 
 <img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
 
@@ -25,7 +25,7 @@
 
   </div>
 	
-	<div class="col-md-6"  >
+	<div class="col-md-6">
   
   	<h3 class="status-head"> {{postlabel}} </h3>
 
@@ -41,10 +41,13 @@
   	</a>
   	</div>
 
-  	<div>	
-  		<input type="button" class="btn btn-primary" ng-click = "prevPage()" value = "PreviousPage">
-  		<input type="button" class="btn btn-primary" ng-click = "nextPage()" value = "Next Page">
+  	<div ng-show="pagination">	
+  		<input type="button" ng-hide = "prevPageHide" class="btn btn-primary" ng-click = "prevPage()" value = "PreviousPage">
+  		<input type="button" ng-hide = "nextPageHide" class="btn btn-primary" ng-click = "nextPage()" value = "Next Page">
 		</div>
+    <div ng-hide="pagination">  
+      Oops...!! No Posts :P
+    </div>
 
 	</div>
 	
