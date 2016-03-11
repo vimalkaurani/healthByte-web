@@ -3,7 +3,7 @@
 define([], function()
 {
     return {
-        defaultRoutePath: '/login',
+        // defaultRoutePath: '/login',
         routes: {
 
             '/login':{
