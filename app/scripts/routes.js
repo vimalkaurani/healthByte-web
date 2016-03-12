@@ -3,12 +3,13 @@
 define([], function()
 {
     return {
-        defaultRoutePath: '',
+        // defaultRoutePath: '/login',
         routes: {
-            '/login': {
-                templateUrl: '/views/doctor/login.html',
+
+            '/login':{
+                templateUrl: 'views/editor/login.html',
                 dependencies: [
-                    'controllers/loginController'
+                    'controllers/editor/loginController'
                 ],
                 access: {
                     requiresAuth: false,
@@ -18,6 +19,7 @@ define([], function()
                     label: "Login"
                 }
             },
+
             '/vallPosts/status/:status/page/:pageno': {
                 templateUrl: 'views/editor/list.html',
                 dependencies: [
@@ -31,6 +33,8 @@ define([], function()
                     label: "List Page"
                 }
             },
+
+            
             '/editor': {
                 templateUrl: 'views/editor/editormainpage.html',
                 dependencies: [

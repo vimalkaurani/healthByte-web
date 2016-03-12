@@ -43,7 +43,7 @@ define(['routes','services/dependencyResolverFor'], function(config, dependencyR
 
                 if(config.defaultRoutePath !== undefined)
                 {
-                    $routeProvider.otherwise({redirectTo:config.defaultRoutePath});
+                    //$routeProvider.otherwise({redirectTo:config.defaultRoutePath});
                 }
             }
         ]);
@@ -54,6 +54,14 @@ define(['routes','services/dependencyResolverFor'], function(config, dependencyR
 
             function($rootScope, $location, $http, $route, $routeParams, $cookieStore)
             {
+                $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+                    var practoAccountId = $cookieStore.get('practoAccountId');
+                    
+                    $http.defaults.headers.common['X-AUTH-TOKEN'] = practoAccountId;
+                    if(typeof practoAccountId === 'undefined' && typeof $location.search().uid === 'undefined') {
+                        $location.url('/login');
+                    }
+                });
 
             }
         ]);
