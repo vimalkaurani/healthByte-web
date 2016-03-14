@@ -2,9 +2,9 @@
 'use strict';
 
 define(['angular', 'app'], function(angular, app) {
-    app.controller("mediumController", function($scope, $location, $cookieStore, getService, patchService, postService, $modal, $rootScope, $routeParams, $http) {
+    app.controller("mediumController", function($scope, $location, $cookies, getService, patchService, postService, $modal, $rootScope, $routeParams, $http) {
 
-        var practoAccountId = $cookieStore.get('practoAccountId');
+        var practoAccountId = $cookies.get('practoAccountId');
         $scope.draftBtn = function() {
             var user_data = {
                 'title': $scope.title,

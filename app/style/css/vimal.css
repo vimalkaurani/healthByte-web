@@ -26,6 +26,7 @@ body {
 }
 .modal-dialog{
     width: 390px;
+    margin-top: 10em;
 }
 .post-div {
     font-size: 16px;
@@ -33,14 +34,24 @@ body {
     color: #7d7d7d;
     background-color: white;
     padding: 28px 30px;
+    margin-left: 30px;
+    margin-top: 30px;
     
-    width: 100%;
+    /*width: 100%;*/
     
     border: 1px solid #d6d6d6;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 2px;
     
+}
+
+.editbutton1 {
+    margin-left: 30px;
+    margin-top:  20px
+}
+.editbutton{
+    margin-top: 20px; 
 }
 .post-title{
     color: #2279ba;
@@ -159,6 +170,12 @@ display: block;
     -ms-animation: rotate360 1.25s linear infinite;
     -webkit-animation: rotate360 1.25s linear infinite;
     -o-animation: rotate360 1.25s linear infinite;
+}
+
+.logout{
+    position: absolute;
+    right:16px;
+    top:20px;
 }
 @-o-keyframes rotate360{
     from {-o-transform:rotate(0deg)}

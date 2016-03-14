@@ -43,19 +43,19 @@ define(['routes','services/dependencyResolverFor'], function(config, dependencyR
 
                 if(config.defaultRoutePath !== undefined)
                 {
-                    //$routeProvider.otherwise({redirectTo:config.defaultRoutePath});
+                    $routeProvider.otherwise({redirectTo:config.defaultRoutePath});
                 }
             }
         ]);
 
     app.run(
         [
-            '$rootScope', '$location', '$http', '$route','$routeParams','$cookieStore',
+            '$rootScope', '$location', '$http', '$route','$routeParams','$cookies',
 
-            function($rootScope, $location, $http, $route, $routeParams, $cookieStore)
+            function($rootScope, $location, $http, $route, $routeParams, $cookies)
             {
                 $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-                    var practoAccountId = $cookieStore.get('practoAccountId');
+                    var practoAccountId = $cookies.get('practoAccountId');
                     
                     $http.defaults.headers.common['X-AUTH-TOKEN'] = practoAccountId;
                     if(typeof practoAccountId === 'undefined' && typeof $location.search().uid === 'undefined') {

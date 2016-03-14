@@ -3,7 +3,7 @@
 define([], function()
 {
     return {
-        // defaultRoutePath: '/login',
+        defaultRoutePath: '/login',
         routes: {
 
             '/login':{
@@ -23,7 +23,8 @@ define([], function()
             '/vallPosts/status/:status/page/:pageno': {
                 templateUrl: 'views/editor/list.html',
                 dependencies: [
-                    'controllers/editor/listController'
+                    'controllers/editor/listController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,
@@ -38,7 +39,8 @@ define([], function()
             '/editor': {
                 templateUrl: 'views/editor/editormainpage.html',
                 dependencies: [
-                    'controllers/editor/editorController'
+                    'controllers/editor/editorController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,
@@ -52,7 +54,8 @@ define([], function()
                 templateUrl: 'views/editor/editPost.html',
                 dependencies: [
                     'controllers/editor/editPostController',
-                    'controllers/editor/deletePostController'
+                    'controllers/editor/deletePostController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,

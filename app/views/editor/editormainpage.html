@@ -7,34 +7,46 @@
 <head>
 <link rel="stylesheet" href="style/css/vimal.css">
 </head>
-<div class="welcome_title" style="padding-top:18px;"><a href="http://myfit.practo.local/#!/vallPosts/status/all/page/1">
-
-<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
 
 
+<div class="welcome_title" style="padding-top:18px; position:fixed ; width: 98%;
+    background-color: white;
+    z-index: 9999;" ng-controller = "loginController">
+
+   <a href="http://myfit.practo.local/#!/vallPosts/status/all/page/1"><img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+
+   
+   <label class="logout">
+     <input type="button" value="log out" ng-click="logout()">
+   </label>
+   
+
+   <hr class="heading_line">
 </div>
-<hr class="heading_line">
-<h3> Submit an article </h3>
 
-<div name="form" ng-controller="mediumController">
-   <div ng-model="title" medium-editor data-placeholder="Enter a title" style="margin: 5px"></div>
-   <div ng-model="content" medium-editor data-placeholder="Write the content" style="margin: 5px"></div>
-   <div>
-      <span ng-bind='user_msg' style="display: block;"></span>
+<div class= "row"  >
+<div class="col-md-1"></div>
 
-      <input type="button" class="btn btn-primary" ng-click = "draftBtn()" value = "Save as Draft">
-      <input type="button" class="btn btn-success" ng-click = "publishBtn()" value = "Publish">
-      <!-- <input type="button" ng-click = "redirectBtn()" value = "Go to All posts"> -->
+<div style = "top: 5em;" class="col-md-7">
+   
+   <h3> Submit an article </h3>
+
+   <div name="form" ng-controller="mediumController">
+      <div style="margin-bottom:15px" ng-model="title" medium-editor data-placeholder="Enter a title" ></div>
+      <div style="margin-bottom:15px" ng-model="content" medium-editor data-placeholder="Write the content" ></div>
+      <div style="margin-top:10px ;">
+         <span ng-bind='user_msg' style="display: block;"></span>
+
+         <input type="button" class="btn btn-primary" ng-click = "draftBtn()" value = "Save as Draft">
+         <input type="button" class="btn btn-success" ng-click = "publishBtn()" value = "Publish">
+         <!-- <input type="button" ng-click = "redirectBtn()" value = "Go to All posts"> -->
+      </div>
+
    </div>
-
-   
-   <!-- <input type="submit" value="Reset" ng-click = "reset()"> -->
-  
-
-   
-
-   
+</div>  
 </div>
+   <!-- <input type="submit" value="Reset" ng-click = "reset()"> -->
+
 
  <!-- <div class="row page-head" ng-controller="mediumController">
    <div ng-model="text" medium-editor></div> -->

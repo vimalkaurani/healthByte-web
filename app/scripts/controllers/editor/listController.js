@@ -5,10 +5,10 @@
 define(['angular', 'app'], function (angular, app) {
 
   app.controller("listController", function
-   ($scope, $location, $cookieStore, getService, patchService, $modal, $rootScope, $routeParams, $http) {
+   ($scope, $location, $cookies, getService, patchService, $modal, $rootScope, $routeParams, $http) {
     $scope.pagination = false;
 
-    var practoAccountId = $cookieStore.get('practoAccountId');
+    var practoAccountId = $cookies.get('practoAccountId');
     function getAllPost(url) {
       var req = {method : 'GET',
                 url : url
