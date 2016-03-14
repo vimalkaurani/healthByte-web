@@ -26,6 +26,7 @@ body {
 }
 .modal-dialog{
     width: 390px;
+    margin-top: 10em;
 }
 .post-div {
     font-size: 16px;
@@ -33,14 +34,24 @@ body {
     color: #7d7d7d;
     background-color: white;
     padding: 28px 30px;
+    margin-left: 30px;
+    margin-top: 30px;
     
-    width: 100%;
+    /*width: 100%;*/
     
     border: 1px solid #d6d6d6;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 2px;
     
+}
+
+.editbutton1 {
+    margin-left: 30px;
+    margin-top:  20px
+}
+.editbutton{
+    margin-top: 20px; 
 }
 .post-title{
     color: #2279ba;
@@ -135,4 +146,54 @@ display: block;
     
     margin-top: 10px;
     margin-bottom: 16px;
+}
+#resultsRefreshLoader{
+    top: 30%;
+    margin-left: 50%;
+    width: 65px;
+    height: 65px;
+    position: fixed;
+    z-index: 1001;
+    background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAYAAACO98lFAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKsSURBVHic7dlPSBRxGMbx7zu7mhBeNCFvlbomaQepoFPHIDpEf2BZjboVQXXvLnQOunQpsFQ6eIr+QAcvHYTqIIZZS9bFIt0NFMHYZt4uHcR2prDm3QHf57jP4X35sDP7mx1RVbZ7gkYvkIU4Ao4AOALgCIAjAI4AOALgCIAjAI4AOALgCIAjAI4AOAIAecthPU/KO6orHCOK+gPRchTmpipD3SuWO9SLWP2z1Pbg7UAQBOPAgQ0fL6JyYbnU89xkiZiYIOwendlZy7fMCOyrU6+GGg58K/V9Sn2RmJjcE8KmllIMAEBrXnLXLPaIiwmCRjqY2COJfdqxQRD5nNijiX3aMUEIRB8DUXwvjyz2iJ1vMWSp2PsS4WbdUphcKvaMWewRF7OfSID2ifmzonIJ2K+wIMrDSqlwW6Ghb4BMEbIaPzZjfGz+2+y997Flrbl2JAyibolkttJUeKXnCNOal7nLoX28fFSIRoGuDR9PB2Fu+OtwVzmNmZlC6Lg/16m53CzQVqeea/3ePLhwcc/6/56bqXuC5vPXqQ8A0LfaXCumMTdTCKgeTuzlD/0WkykEEan8S7/VZAohInqa1Idh9CyNuZlCqBZ774JM1etUuFMd6n2RxtxMIShoJV87DjoC8h6ogcyiXK0WC5fTmpupn8jNERCL54pMfRM2x+rByvTY/Osp8grQD1pGZWxbPUXumng3gnLj9w2YXC4WzpgsERMThI6J+UOqMk3M5SciQ438Y8XknhCpnEiaFametNgjLiYIotqZ2COJfdqxQQjkdWKPJvZpxwQhV1sfU/gQU6/+0PCWxR5xMUH4cv7gmkbRKeDNpmoRldONfAUHxifGbf9WOsvJ9LHZKo6AIwCOADgC4AiAIwCOADgC4AiAIwCOADgC4AiAIwCOAMBPYTvmzcZzDRAAAAAASUVORK5CYII=') center center no-repeat;
+}
+#resultsRefreshLoader .spinner{
+    width: 61px;
+    height: 61px;
+    border-top : 2px solid #EBEBEB;
+    border-right: 2px solid #EBEBEB;
+    border-bottom : 2px solid #3BB9DF;
+    border-left: 2px solid #3BB9DF;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotate360 1.25s linear infinite;
+    -moz-animation: rotate360 1.25s linear infinite;
+    -ms-animation: rotate360 1.25s linear infinite;
+    -webkit-animation: rotate360 1.25s linear infinite;
+    -o-animation: rotate360 1.25s linear infinite;
+}
+
+.logout{
+    position: absolute;
+    right:16px;
+    top:20px;
+}
+@-o-keyframes rotate360{
+    from {-o-transform:rotate(0deg)}
+    to {-o-transform:rotate(360deg)}
+}
+@-ms-keyframes rotate360{
+    from {-ms-transform:rotate(0deg)}
+    to {-ms-transform:rotate(360deg)}
+}
+@-moz-keyframes rotate360{
+    from {-moz-transform:rotate(0deg)}
+    to {-moz-transform:rotate(360deg)}
+}
+@-webkit-keyframes rotate360{
+    from {-webkit-transform:rotate(0deg)}
+    to {-webkit-transform:rotate(360deg)}
+}
+@keyframes rotate360{
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)}
 }

@@ -1,15 +1,26 @@
 <head>
 <link rel="stylesheet" href="style/css/vimal.css">
 </head>
-<div class="welcome_title" style="padding-top:18px; "><a href="http://fit.practo.local/#!/vallPosts/status/all/page/1">
+<div class="welcome_title" style="padding-top:18px; position:fixed ; width: 98%;
+    background-color: white;
+    z-index: 9999;" ng-controller = "loginController">
 
-<img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+   <a href="http://myfit.practo.local/#!/vallPosts/status/all/page/1"><img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
 
+   
+   <label class="logout">
+     <input type="button" value="log out" ng-click="logout()">
+   </label>
+   
+
+   <hr class="heading_line">
 </div>
-<hr class="heading_line">
-<div class="col-md-9" ng-controller = "editPostController" ng-init = "editPosts()">
+<div class="row" style="margin-top:100px">
+<div class="col-md-1"></div>
 
-    <div class="post-div " >
+<div class="col-md-8" ng-controller = "editPostController" ng-init = "editPosts()">
+
+    <div class="post-div" >
 
       <!-- <h3 class = "post-title" >{{post.title}}</h3>
       <p>{{post.content}}  </p> -->
@@ -20,9 +31,12 @@
     <!-- <p>{{post.content}}  </p> -->
 
   </div>
-  <input type="submit" class="btn btn-primary" ng-click="editBtn()" value="Save">
-  <input ng-show = "publishedStatus != 'published' && softDeleted==0" type="submit" class="btn btn-success" ng-click="publishBtn()" value="Publish">
-  <input ng-show = "softDeleted == 0" type="submit" class="btn btn-danger" ng-click="deletePost()" value="Delete">
-  <input ng-show = "softDeleted == 1" type="submit" class="btn btn-info" ng-click="saveAsDraft()"
+  <input type="submit" class="btn btn-primary editbutton1" ng-click="editBtn()" value="Save">
+  <input ng-show = "publishedStatus != 'published' && softDeleted==0" type="submit" class="btn btn-success editbutton" ng-click="publishBtn()" value="Publish">
+  <input ng-show = "softDeleted == 0" type="submit" class="btn btn-danger editbutton" ng-click="deletePost()" value="Delete">
+  <input ng-show = "softDeleted == 1" type="submit" class="btn btn-info editbutton" ng-click="saveAsDraft()"
   value="Save back to drafts">
 </div>
+
+</div>
+

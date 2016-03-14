@@ -3,12 +3,13 @@
 define([], function()
 {
     return {
-        defaultRoutePath: '',
+        defaultRoutePath: '/login',
         routes: {
-            '/login': {
-                templateUrl: '/views/doctor/login.html',
+
+            '/login':{
+                templateUrl: 'views/editor/login.html',
                 dependencies: [
-                    'controllers/loginController'
+                    'controllers/editor/loginController'
                 ],
                 access: {
                     requiresAuth: false,
@@ -18,10 +19,12 @@ define([], function()
                     label: "Login"
                 }
             },
+
             '/vallPosts/status/:status/page/:pageno': {
                 templateUrl: 'views/editor/list.html',
                 dependencies: [
-                    'controllers/editor/listController'
+                    'controllers/editor/listController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,
@@ -31,10 +34,13 @@ define([], function()
                     label: "List Page"
                 }
             },
+
+            
             '/editor': {
                 templateUrl: 'views/editor/editormainpage.html',
                 dependencies: [
-                    'controllers/editor/editorController'
+                    'controllers/editor/editorController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,
@@ -48,7 +54,8 @@ define([], function()
                 templateUrl: 'views/editor/editPost.html',
                 dependencies: [
                     'controllers/editor/editPostController',
-                    'controllers/editor/deletePostController'
+                    'controllers/editor/deletePostController',
+                    'controllers/editor/loginController'
                 ],
                 access: {
                   requiresAuth: false,
