@@ -1,26 +1,20 @@
-<head>
-  <link rel="stylesheet" href="style/css/vimal.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
-<body>
 <div class="welcome_title" style="padding-top:20px; position:fixed ; width: 98%;
     background-color: white;
     z-index: 9999;" ng-controller = "loginController">
 
    <a href="http://myfit-pensieve.practo.com/#!/vallPosts/status/all/page/1"><img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
 
-    <div class="dropdown logout">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        {{name}}
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
+    <div dropdown on-toggle="toggled(open)" class="dropdown-btn logout">
+                        <button class="btn btn-default" dropdown-toggle type="button" >
+                            <span>
+                              {{name}}
+                            </span>
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
         <li><a href="http://accounts-pensieve.practo.com/home_new">My account</a></li>
         <li><a ng-click="logout()">Logout</a></li>
       </ul>
-    </div>
+                    </div>
    
 
    <hr class="heading_line">
@@ -73,4 +67,3 @@
 	</div>
 	
 </div>
-</body>
