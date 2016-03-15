@@ -26,7 +26,7 @@ define(['angular', 'app'], function(angular, app) {
         $scope.logout = function(){
             $cookies.remove("practoAccountId");
             $cookies.remove("name");
-            $window.location.href="http://accounts-pensieve.practo.com/logout";
+            $window.location.href="http://accounts-pensieve.practodev.com/logout";
         
         };
     });
