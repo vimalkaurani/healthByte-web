@@ -5,20 +5,28 @@
 <
 </div> -->
 <head>
-<link rel="stylesheet" href="style/css/vimal.css">
+  <link rel="stylesheet" href="style/css/vimal.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-
-
-<div class="welcome_title" style="padding-top:18px; position:fixed ; width: 98%;
+<body>
+<div class="welcome_title" style="padding-top:20px; position:fixed ; width: 98%;
     background-color: white;
     z-index: 9999;" ng-controller = "loginController">
 
-   <a href="http://myfit.practo.local/#!/vallPosts/status/all/page/1"><img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
+   <a href="http://myfit-pensieve.practo.com/#!/vallPosts/status/all/page/1"><img src="/style/images/Practo_health_feed_195h.png" style="width:300px;"></a>
 
-   
-   <label class="logout">
-     <input type="button" value="log out" ng-click="logout()">
-   </label>
+    <div class="dropdown logout">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        {{name}}
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="http://accounts-pensieve.practo.com/home_new">My account</a></li>
+        <li><a ng-click="logout()">Logout</a></li>
+      </ul>
+    </div>
    
 
    <hr class="heading_line">
@@ -27,7 +35,7 @@
 <div class= "row"  >
 <div class="col-md-1"></div>
 
-<div style = "top: 5em;" class="col-md-7">
+<div style = "top: 7em;" class="col-md-7">
    
    <h3> Submit an article </h3>
 

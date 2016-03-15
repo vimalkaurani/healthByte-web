@@ -9,21 +9,24 @@ define(['angular', 'app'], function(angular, app) {
                 if (typeof $location.search().uid === 'undefined') {
                     var myEl = angular.element(document.querySelector('#form'));
                     myEl.append(data);
-                    document.getElementById("openid_message").submit();
+                    document.getElementById("openid_message").submit();     
                 } else {
                     $cookies.put('practoAccountId', $location.search().uid);
+                    $cookies.put('name',$location.search().name);
+                    $rootScope.name = $cookies.get('name');
                     $location.url('/vallPosts/status/all/page/1');
                 }
 
             });
         }
+
+        $rootScope.name = $cookies.get('name');
         
 
         $scope.logout = function(){
-            console.log("cookie clean");
-            console.log($cookies);
             $cookies.remove("practoAccountId");
-            $window.location.href="http://accounts.practo.com/logout";
+            $cookies.remove("name");
+            $window.location.href="http://accounts-pensieve.practo.com/logout";
         
         };
     });

@@ -173,8 +173,8 @@ display: block;
 }
 
 .logout{
-    position: absolute;
-    right:16px;
+    position: absolute !important;
+    right:38px;
     top:20px;
 }
 @-o-keyframes rotate360{
